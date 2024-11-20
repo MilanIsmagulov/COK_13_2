@@ -64,6 +64,20 @@
     flex-grow: 1 !important;
 }
 
+.svgLayout{
+    min-width: 45px;
+    min-height: 45px;
+    max-width: 45px;
+    max-width: 45px;
+}
+
+#content > div.test_wrapper_type_10 > div.image_wrapper > img{
+    padding: 0 !important;
+}
+
+.unic_14_2, .targetField{
+    width: clamp(150px, 22vw, 700px);
+}
 .center_div_custom{
     display: flex;
     flex-direction: column;
@@ -73,8 +87,17 @@
 }
 
 .full_img_custom{
-    width: auto;
+    width: auto !important;
     height: 100% !important;
+}
+
+.width_100{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#dynamic-content > div.image_test_type_2 > img{
+
 }
 
 .unique_class_11 p{

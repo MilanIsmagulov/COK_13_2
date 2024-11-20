@@ -93,19 +93,21 @@ function waitForData() {
             }
             // Отображение изображения, если имеется
             if (imageInfo && test.find(item => item.type === 1) || test.find(item => item.type === 2)) {
-                var imageDiv = document.createElement('div');
-                imageDiv.className = 'image_test_type_2';
-                var img;
-                if (imageInfo.image_path.includes(".jpg") || imageInfo.image_path.includes(".png")) {
-                    img = document.createElement('img');
-                } else if (imageInfo.image_path.includes(".mp4")) {
-                    img = document.createElement('video');
-                    img.controls = "controls";
+                if(imageInfo){
+                    var imageDiv = document.createElement('div');
+                    imageDiv.className = 'image_test_type_2';
+                    var img;
+                    if (imageInfo.image_path.includes(".jpg") || imageInfo.image_path.includes(".png")) {
+                        img = document.createElement('img');
+                    } else if (imageInfo.image_path.includes(".mp4")) {
+                        img = document.createElement('video');
+                        img.controls = "controls";
+                    }
+                    img.src = imageInfo.image_path;
+                    img.alt = 'Проверьте image_path';
+                    imageDiv.appendChild(img);
+                    dynamicContainer.appendChild(imageDiv);
                 }
-                img.src = imageInfo.image_path;
-                img.alt = 'Проверьте image_path';
-                imageDiv.appendChild(img);
-                dynamicContainer.appendChild(imageDiv);
             }
             // Отображение теста с вариантами ответов
             if (answers && correctAnswers) {

@@ -42,7 +42,7 @@ footer {
     z-index: 10000;
 }
 p{
-    text-align: justify;
+    text-align: left;
     text-indent: 0%;
     margin-bottom: 25px;
     font-size: clamp(18px, 1.5vw, 25px);
@@ -500,6 +500,7 @@ line{
 }
 .image_test_type_2{
     display: flex;
+    order: -1;
     flex-grow: 1;
     min-width: 500px;
     width: 50%;
@@ -509,7 +510,7 @@ line{
 }
 .image_test_type_2 img{
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 450px;
     width: 100%;
 }
 .description_w_input {
@@ -541,7 +542,7 @@ line{
     max-width: 250px;
 }
 .description_w_input_2 {
-    width: 65%;
+    width: 100%;
     margin-left: 25px;
 }
 .description_w_input_2 p{
@@ -810,6 +811,7 @@ ul li div{
     border-radius: 15px;
     cursor: grab;
     width: 100% !important;
+    font-size: 22px;
     /* overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; */
@@ -1518,7 +1520,7 @@ line{
     max-height: 0;
 }
 .zoom_paragraph{
-    font-size: clamp(15px, 1.5vw, 25px) !important;
+    font-size: clamp(15px, 1.5vw, 22px) !important;
 }
 @media (max-width: 1200px) {
     .targetField, .definition {

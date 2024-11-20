@@ -14,7 +14,7 @@ window.dataLoaded = false;
         { time: 84.7, name: "Эксплуатация кабельных линий, основные методы обнаружения мест их повреждений" }, // если typeOfButtons = 'video'
     ]; // если typeOfButtons = 'video'
     let pathToVideo = './content/page_content/video_13.mp4'; // если typeOfButtons = 'video'
-    let videoTitle2 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'; // если typeOfButtons = 'video'
+    let videoTitle2 = ' '; // если typeOfButtons = 'video'
     // В CSS должна быть к каждому id или class приписка "_custom", и закидываем их в файл "pages/eom_1_unit/styles/custom_pages.css"
     let customPage = ``; // В CSS должна быть к каждому id или class приписка "_custom", и закидываем их в файл "pages/eom_1_unit/styles/custom_pages.css"
     let background_type = dropType;

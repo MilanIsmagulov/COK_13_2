@@ -31,14 +31,14 @@ function createTest(index){
             <!-- Стартовая колонка -->
                 <div class="startColumn">
                     ${startField.definitions.map((item, index) => `
-                    <div class="element_div">
+                    <div class="element_div  unic_${currentPageIndex}">
                         <div class="definition" id="definition_${index+1}">${item}</div>
                         <div id="startField${index+1}" class="svgLayout"></div>
                     </div>`).join('')}
                 </div>
                 <div class="targetColumn">
                     ${targetField.answers.map((item, index) => `
-                    <div class="element_div">
+                    <div class="element_div  unic_${currentPageIndex}_2">
                         <div id="targetField${index+1}" class="svgLayout"></div>
                         <div class="targetField" id="targetfield_${index+1}">${item}</div>
                     </div>`).join('')}
