@@ -1,10 +1,20 @@
 function waitForData() {
-    if (blockButtonEOM2 === 1){
-        backWardBtn.classList.add('gray_dis');
-        backWardBtn.disabled = true;
-        nextBtn.classList.add('gray_dis');
-        nextBtn.disabled = true;
+    function checkBtnStatus(){
+        var testData = data[`index_${currentPageIndex}`];
+        var attempts = parseInt(localStorage.getItem(`attempts_${currentPageIndex}`));
+        if(blockButtonEOM2 == 1 && attempts !== 0 && testData.hasOwnProperty('test')){
+            backWardBtn.classList.add('gray_dis');
+            backWardBtn.disabled = true;
+            nextBtn.classList.add('gray_dis');
+            nextBtn.disabled = true;
+        } else {
+            backWardBtn.classList.remove('gray_dis');
+            backWardBtn.disabled = false;
+            nextBtn.classList.remove('gray_dis');
+            nextBtn.disabled = false;
+        }
     }
+    checkBtnStatus();
     if (window.dataLoaded) {
         // Функция для создания теста
         function createTest(index) {
@@ -69,20 +79,22 @@ function waitForData() {
             }
             // Отображение изображения, если имеется
             if (imageInfo && test.find(item => item.type === 1) || test.find(item => item.type === 2)) {
-                const imageDiv = document.createElement('div');
-                imageDiv.className = 'image_test_type_2';
-                let img;
-                if (imageInfo.image_path.includes(".jpg") || imageInfo.image_path.includes(".png")) {
-                    img = document.createElement('img');
-                } else if (imageInfo.image_path.includes(".mp4")) {
-                    img = document.createElement('video');
-                    img.controls = "controls";
+                if(imageInfo){
+                    const imageDiv = document.createElement('div');
+                    imageDiv.className = 'image_test_type_2';
+                    let img;
+                    if (imageInfo.image_path.includes(".jpg") || imageInfo.image_path.includes(".png")) {
+                        img = document.createElement('img');
+                    } else if (imageInfo.image_path.includes(".mp4")) {
+                        img = document.createElement('video');
+                        img.controls = "controls";
+                    }
+                    // const img = document.createElement('img');
+                    img.src = imageInfo.image_path;
+                    img.alt = 'Проверьте image_path';
+                    imageDiv.appendChild(img);
+                    dynamicContainer.appendChild(imageDiv);
                 }
-                // const img = document.createElement('img');
-                img.src = imageInfo.image_path;
-                img.alt = 'Проверьте image_path';
-                imageDiv.appendChild(img);
-                dynamicContainer.appendChild(imageDiv);
             }
             // Отображение теста с вариантами ответов
             if (answers && correctAnswers) {
