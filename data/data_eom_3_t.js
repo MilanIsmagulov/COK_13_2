@@ -33,11 +33,11 @@ const data = {
                 "<p class='popup_zoom_plc zoom_paragraph'>Фаза 1</p>",
                 "<p class='popup_zoom_plc zoom_paragraph'>Фаза 2</p>",
                 "<p class='popup_zoom_plc zoom_paragraph'>Магнитный пускатель</p>",
-                "<p class='popup_zoom_plc zoom_paragraph'>Фаза 3</p>",
+                "<p class='popup_zoom_plc zoom_paragraph'>Автоматический выключатель</p>",
                 "<p class='popup_zoom_plc zoom_paragraph'>Тепловое реле</p>",
-                "<p class='popup_zoom_plc zoom_paragraph'>Автоматический выключатель</p>"
+                "<p class='popup_zoom_plc zoom_paragraph'>Фаза 3</p>",
             ]},
-            {"correct_answer_type_10": [6, 3, 5, 1, 2, 4]},
+            {"correct_answer_type_10": [4, 3, 5, 1, 2, 6]},
             {"image": true, "image_path": "./content/empty_img.png", "image_sgn": "blablabla"}
         ],
     },
@@ -97,7 +97,7 @@ const data = {
         ],
     },
     "index_6":{
-        "subtitle": "Какое из следующих утверждений верно в контексте приоритетов предотвращения неисправностей электрических машин? <b class='black_sub fz20'>(Выберите все правильные ответы)</b>",
+        "subtitle": "Какое из следующих утверждений верно в контексте приоритетов предотвращения неисправностей электрических машин? <b class='black_sub'>(Выберите все правильные ответы)</b>",
         "step_of_popup": "Какое из следующих утверждений верно в контексте приоритетов предотвращения неисправностей электрических машин?",
         "test":[
             {"type": 1},
@@ -112,7 +112,7 @@ const data = {
         ],
     },
     "index_7":{
-        "subtitle": "Какие факторы могут затруднить диагностику неисправностей в электрических машинах? <b class='black_sub fz20'>(Выберите все подходящие варианты)</b>",
+        "subtitle": "Какие факторы могут затруднить диагностику неисправностей в электрических машинах? <b class='black_sub'>(Выберите все правильные ответы)</b>",
         "step_of_popup": "Какие факторы могут затруднить диагностику неисправностей в электрических машинах?",
         "test":[
             {"type": 1},

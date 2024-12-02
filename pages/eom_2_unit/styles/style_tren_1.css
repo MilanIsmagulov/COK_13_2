@@ -611,10 +611,6 @@ button:disabled {
     animation: shake 0.5s !important;
 }
 
-.pink_subtitle{
-    font-size: 25px !important;
-}
-
 .text2{
     margin: 0 !important;
     padding: 0 !important;

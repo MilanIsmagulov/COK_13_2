@@ -3,7 +3,7 @@ var element2 = document.querySelector('.number_of_step');
 var number2 = parseInt(element2.textContent, 10);
 var attempts = localStorage.getItem(`attempts_${number2}`);
 if (attempts == 0){
-    document.querySelector('#control_button_2').style.display = `none`;
+    // document.querySelector('#control_button_2').style.display = `none`;
 } else {
     document.querySelector('#control_button_2').style.display = `inline-block`;
 };
@@ -20,6 +20,8 @@ function checkBtnStatus(){
         backWardBtn.disabled = false;
         nextBtn.classList.remove('gray_dis');
         nextBtn.disabled = false;
+        document.getElementById('control_button_2').classList.add('gray_dis');
+        document.getElementById('control_button_2').disabled = true;
     }
 }
 checkBtnStatus();
