@@ -1496,6 +1496,9 @@ line{
     }
 }
 @media (max-width: 510px) {
+    .popup_content_type_10 {
+        min-width: 200px;
+    }
     .number {
         font-size: 15px;
     }
