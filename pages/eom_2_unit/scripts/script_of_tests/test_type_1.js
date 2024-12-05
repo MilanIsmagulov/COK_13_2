@@ -259,9 +259,11 @@ function waitForData() {
             }
             document.getElementById('control_button_2').style.display = 'none';
             document.getElementById('control_button_3').style.display = 'none';
+            backWardBtn.classList.remove('gray_dis');
+            backWardBtn.disabled = false;
             nextBtn.classList.remove('gray_dis');
             nextBtn.disabled = false;
-            window.alert("Вы потратили все попытки для прохождения задания, кнопка 'Ответить' заблокированна!!!");
+            window.alert("Вы потратили все попытки для прохождения задания, кнопка 'Ответить' заблокирована!!!");
         };
         // ЭТО ДЛЯ ОШИБОК
         function disabvarest() {
